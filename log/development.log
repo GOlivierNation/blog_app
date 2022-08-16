@@ -31,3 +31,30 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 796ms (Views: 636.1ms | ActiveRecord: 0.0ms | Allocations: 99339)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-16 16:24:44 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 23)
+  Rendered layout layouts/application.html.erb (Duration: 451.3ms | Allocations: 13963)
+Completed 200 OK in 504ms (Views: 488.8ms | Allocations: 14859)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-16 16:25:23 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2402)
+Completed 200 OK in 14ms (Views: 12.8ms | Allocations: 2744)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-16 16:25:27 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2390)
+Completed 200 OK in 4ms (Views: 3.9ms | Allocations: 2715)
+
+
