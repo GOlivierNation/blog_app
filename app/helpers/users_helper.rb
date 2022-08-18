@@ -1,0 +1,3 @@
+# user
+module UsersHelper
+end
