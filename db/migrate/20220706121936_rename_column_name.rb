@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# frozen_string_literal
 class RenameColumnName < ActiveRecord::Migration[7.0]
   def change
     rename_column :posts, :authorId, :user_id

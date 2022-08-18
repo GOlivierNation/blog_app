@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# frozen_string_literal
 class AddUserRefPostRefToComment < ActiveRecord::Migration[7.0]
   def change
     add_foreign_key :comments, :users, column: :authorId
