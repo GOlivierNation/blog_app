@@ -2,12 +2,12 @@ class LikesController < ApplicationController
   def create
     post = Post.find(params[:post_id])
     user = current_user
-    liked = Like.where(user:, post:)
+    liked = Like.where(user, post)
 
     if liked.present?
       flash[:notice] = 'Post already liked'
     else
-      like = Like.create(user:, post:)
+      like = Like.create(user, post)
       if like.save
         redirect_to user_post_path(post.user, post), notice: 'Post successfully liked'
       else
