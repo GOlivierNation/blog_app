@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# frozen_string_literal
 class AddUserRefPostRefToLikes < ActiveRecord::Migration[7.0]
   def change
     add_foreign_key :likes, :users, column: :authorId
