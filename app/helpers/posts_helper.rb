@@ -1,3 +1,2 @@
-# helper
 module PostsHelper
 end

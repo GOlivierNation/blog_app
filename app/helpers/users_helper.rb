@@ -1,3 +1,2 @@
-# user
 module UsersHelper
 end
