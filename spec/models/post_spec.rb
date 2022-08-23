@@ -1,37 +1,21 @@
-require_relative 'rails_helper'
+require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  before :each do
-    @author = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                          bio: 'Teacher from Mexico.')
+  subject { Post.new(author_id: 1, title: 'Hello', text: 'This is my first post') }
+  before { subject.save }
+
+  it 'title should not be blank' do
+    subject.title = nil
+    expect(subject).to_not be_valid
   end
 
-  it 'is valid with valid attributes' do
-    expect(Post.create(author: @author, title: 'Hello', text: 'This is my first post')).to be_valid
+  it 'title should not exceed 250 characters' do
+    subject.title = 'h' * 251
+    expect(subject).to_not be_valid
   end
 
-  it 'is not valid with title empty' do
-    expect(Post.create(author: @author, title: '', text: 'This is my first post')).to_not be_valid
-  end
-
-  it 'is not valid with title exceeding 250 characters ' do
-    expect(Post.create(author: @author, title: @title, text: 'This is my first post')).to_not be_valid
-  end
-
-  it 'should update post counter' do
-    Post.create(author: @author, title: 'Hello', text: 'This is my first post')
-    expect(@author.posts_counter).to eq(1)
-  end
-
-  it 'should return five (5) most recent comments' do
-    post = Post.create(author: @author, title: 'Hello', text: 'This is my first post')
-    Comment.create(post: @post, author: @author, text: 'Hi Tom!')
-    Comment.create(post: @post, author: @author, text: 'Hi Tom!')
-    Comment.create(post: @post, author: @author, text: 'Hi Tom!')
-    Comment.create(post: @post, author: @author, text: 'Hi Tom!')
-    Comment.create(post: @post, author: @author, text: 'Hi Tom!')
-    Comment.create(post: @post, author: @author, text: 'Hi Tom!')
-
-    expect(post.five_recent_comment.count).to eq(5)
+  it 'comments counter should be an integer greater than or equal to zero' do
+    subject.comments_counter = 'anthony'
+    expect(subject).to_not be_valid
   end
 end
