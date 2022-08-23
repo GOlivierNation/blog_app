@@ -1,34 +1,16 @@
-require_relative 'rails_helper'
+require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  it 'is valid with valid attributes ' do
-    expect(User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                       bio: 'Teacher from Mexico.')).to be_valid
+  subject { User.new(name: 'Anthony', photo: 'https://un/photos/F_-0BxGuVvo', bio: 'Full-Stack web dev.') }
+  before { subject.save }
+
+  it 'name should not be blank' do
+    subject.name = nil
+    expect(subject).to_not be_valid
   end
 
-  it 'is not valid with name empty ' do
-    expect(User.create(name: '', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                       bio: 'Teacher from Mexico.')).to_not be_valid
-  end
-
-  it 'is not valid with posts_counter nil' do
-    expect(User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                       bio: 'Teacher from Mexico.', posts_counter: nil)).to_not be_valid
-  end
-
-  it 'is not valid with posts_counter of type string' do
-    expect(User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                       bio: 'Teacher from Mexico.', posts_counter: 'nil')).to_not be_valid
-  end
-
-  it 'should return 3 posts' do
-    author = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                         bio: 'Teacher from Mexico.')
-    Post.create(author: @author, title: 'Hello', text: 'This is my first post')
-    Post.create(author: @author, title: 'Hello', text: 'This is my first post')
-    Post.create(author: @author, title: 'Hello', text: 'This is my first post')
-    Post.create(author: @author, title: 'Hello', text: 'This is my first post')
-
-    expect(author.three_recent_posts.count).to eq(3)
+  it 'posts counter should be an integer greater than or equal to zero' do
+    subject.posts_counter = -1
+    expect(subject).to_not be_valid
   end
 end
