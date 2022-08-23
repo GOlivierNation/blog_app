@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Comment
 class User < ApplicationRecord
   has_many :posts, class_name: 'Post'
