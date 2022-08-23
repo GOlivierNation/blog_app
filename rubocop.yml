@@ -8,6 +8,9 @@ AllCops:
     - "Rakefile"
     - "node_modules/**/*"
 
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
+
   DisplayCopNames: true
 
 Layout/LineLength:
