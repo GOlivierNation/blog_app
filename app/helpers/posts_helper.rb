@@ -1,3 +1,2 @@
-# comment
 module PostsHelper
 end

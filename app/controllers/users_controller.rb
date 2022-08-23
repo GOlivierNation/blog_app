@@ -1,4 +1,3 @@
-# comment
 class UsersController < ApplicationController
   def index; end
 

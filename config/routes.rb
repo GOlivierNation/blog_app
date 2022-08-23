@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
   get 'posts/index'
   get 'posts/show'
@@ -10,7 +8,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :users, only: %i[index show] do
-    resources :posts, only: %i[index show]
+  resources :users, only: [:index, :show] do
+    resources :posts, only: [:index, :show]
   end
 end
