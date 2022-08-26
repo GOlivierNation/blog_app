@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe Comment, type: :model do
-  describe 'Validations For the Comment model' do
+# RSpec.describe Comment, type: :model do
+#   describe 'Validations For the Comment model' do
     before(:each) do
       @comment = Comment.new(text: 'One comment', author_id: 2, post_id: 4)
     end
@@ -43,5 +45,5 @@ RSpec.describe Comment, type: :model do
       @comment.post_id = nil
       expect(@comment).to_not be_valid
     end
-  end
-end
+#   end
+# end

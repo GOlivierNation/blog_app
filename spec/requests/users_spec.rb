@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :request do
+# RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
-    it 'returns reponse status  of http success/ok' do
+    # it 'returns reponse status  of http success/ok' do
       get users_index_path
       expect(response).to have_http_status(:ok)
     end
@@ -16,7 +16,7 @@ RSpec.describe 'Users', type: :request do
       get users_index_path
       expect(response.body).to include('This page will list multiple blop app users')
     end
-  end
+  # end
 
   describe 'GET /show' do
     it 'returns http success' do
@@ -34,4 +34,4 @@ RSpec.describe 'Users', type: :request do
       expect(response.body).to include('Signle User')
     end
   end
-end
+# end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :request do
+# RSpec.describe 'Posts', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
       get '/posts/index'
@@ -34,4 +34,4 @@ RSpec.describe 'Posts', type: :request do
       expect(response.body).to include('Signle Post')
     end
   end
-end
+# end
