@@ -1,4 +1,4 @@
-# comment
+# Comment
 class UsersController < ApplicationController
   def index; end
 
