@@ -1,4 +1,6 @@
-#comment
+# frozen_string_literal: true
+
+# comment
 class ApplicationController < ActionController::Base
   def current_user
     User.first
