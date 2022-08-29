@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Comment
 class CommentsController < ApplicationController
   def new
     @comment = Comment.new
