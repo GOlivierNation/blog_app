@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Comment
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
