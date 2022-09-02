@@ -1,3 +1,3 @@
-# comment
+# Comment
 module LikesHelper
 end
