@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-#Comment
+
+# Comment
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
