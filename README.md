@@ -7,17 +7,62 @@ In this project, you will use migration files to build your schema.
 - PostgreSQL
 ## Live Demo
 ### UNAVAILABLE REQUIRES A SERVER
-## Getting Started
-- clone the repository by running\
-    `https://github.com/GOlivierNation/blog_app.git`
-- navigate to the folder\
-    `cd blog_app`
-- Install packages\
-    `bundle install`
-- Setup database\
-    `rails db:setup`
-- Run migration\
-    `rails db:migrate`
+
+# Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+## Prerequisites
+
+- A web browser like Google Chrome.
+- A code editor like Visual Studio Code with Git and Ruby.
+
+You can check if Git is installed by running the following command in the terminal.
+
+```
+git --version
+```
+
+Likewise for Ruby installation.
+
+```
+ruby --version
+```
+
+To install rails, in the terminal kindly run this command
+
+```
+gem install rails
+```
+
+## Setup
+
+Clone the repository using the GitHub link provided below.
+
+## Install
+
+In the terminal, go to your file directory and run this command.
+
+```
+git clone https://github.com/GOlivierNation/blog-app.git
+```
+
+## Usage
+
+Kindly modify the files as needed.
+
+## Run tests
+
+To install rspec, in the terminal kindly run this command.
+
+```
+gem install rspec
+```
+
+To run tests, please run this command.
+
+```
+rspec ./spec/#{filename}_spec.rb
 
 ## Authors 
 
