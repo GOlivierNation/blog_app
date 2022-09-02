@@ -43,5 +43,5 @@ it 'if post_id is not present' do
   @comment.post_id = nil
   expect(@comment).to_not be_valid
 end
-# end
+#   end
 # end

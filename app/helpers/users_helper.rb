@@ -1,3 +1,3 @@
-# Comment
+# comment
 module UsersHelper
 end
